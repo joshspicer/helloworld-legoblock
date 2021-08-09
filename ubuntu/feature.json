@@ -11,6 +11,12 @@
             ], 
             "allowCustom" : false,
             "default": "english"
+        }, 
+        { 
+            "displayName": "Use a fun color",
+            "buildArg": "HAS_COLOR",
+            "type": "switch",
+            "default": false
         }
     ]
 }
