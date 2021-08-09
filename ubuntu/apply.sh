@@ -1,7 +1,7 @@
 #!/bin/bash
 
 tee /usr/hello.sh > /dev/null \
-<< 'EOF' 
+<< EOF
 RED='\033[0;91m'
 NC='\033[0m' # No Color
 
@@ -26,4 +26,5 @@ do
 done
 EOF
 
+chmod +x /usr/hello.sh
 echo '/usr/hello.sh &' >> ~/.bashrc
