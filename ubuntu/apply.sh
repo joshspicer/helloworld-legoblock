@@ -9,25 +9,23 @@ tee /usr/hello.sh > /dev/null \
 RED='\033[0;91m'
 NC='\033[0m' # No Color
 
-while true
-do
-        if [[ "$HAS_COLOR" == true ]]; then
-                echo -e "\${RED}"
-        fi
-        case "$LANG" in
-                "english")
-                        echo -n -e "Hello, there!"
-                        ;;
-                "italian")
-                        echo -n -e "Salve!"
-                        ;;
-                *)
-                        echo -n -e "Beep Boop"
-        esac
+if [[ "$HAS_COLOR" == true ]]; then
+        echo -e "\${RED}"
+fi
 
-        echo -e "\${NC}"
-        sleep 1
-done
+case "$LANG" in
+        "english")
+                echo -n -e "Hello, there!"
+                ;;
+        "italian")
+                echo -n -e "Salve!"
+                ;;
+        *)
+                echo -n -e "Beep Boop"
+esac
+
+echo -e "\${NC}"
+sleep 1
 EOF
 
 chmod +x /usr/hello.sh
