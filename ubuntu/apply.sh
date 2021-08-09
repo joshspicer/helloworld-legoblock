@@ -1,5 +1,8 @@
 #!/bin/bash
 
+LANG=${LANG:-undefined}
+HAS_COLOR=${HAS_COLOR:-false}
+
 tee /usr/hello.sh > /dev/null \
 << EOF
 #!/bin/bash
@@ -9,9 +12,9 @@ NC='\033[0m' # No Color
 while true
 do
         if [[ "$HAS_COLOR" == true ]]; then
-                echo -e "${RED}"
+                echo -e "\${RED}"
         fi
-        case $LANG in
+        case "$LANG" in
                 "english")
                         echo -n -e "Hello, there!"
                         ;;
@@ -22,7 +25,7 @@ do
                         echo -n -e "Beep Boop"
         esac
 
-        echo -e "${NC}"
+        echo -e "\${NC}"
         sleep 1
 done
 EOF
