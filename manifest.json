@@ -1,0 +1,12 @@
+{
+  "flavor": "feature",
+  "variants": [
+    {
+      "folder": "ubuntu",
+      "supports_bases": [
+        "debian",
+        "ubuntu"
+      ]
+    }
+  ]
+}

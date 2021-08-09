@@ -1,0 +1,16 @@
+{
+    "options": [
+        { 
+            "displayName": "Select Language",
+            "buildArg": "LANG",
+            "type": "choice",
+            "choices": [
+                "english",
+                "italian",
+                "german"
+            ], 
+            "allowCustom" : false,
+            "default": "english"
+        }
+    ]
+}
